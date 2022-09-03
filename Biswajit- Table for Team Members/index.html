@@ -1,12 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="relstyle.css" />
+  </head>
+
+  <body>
+    <nav
+      class="p-5 bg-grey shadow md:flex md:items-center md:justify-between w-full"
+      id="navbar-sticky"
+    >
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-[Poppins] cursor-pointer">
+          <img
+            class="h-10 inline"
+            src="https://cdn.dribbble.com/users/59522/screenshots/6557135/hackathon.png?compress=1&resize=400x300"
+          />
+          SMARTBITHACK
+        </span>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-1 opacity-1 top-[-400px] transition-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500"
+            >SERVICE</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">ABOUT</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500"
+            >CONTACT</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">BLOGS</a>
+        </li>
+
+        <button
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Get Started
+        </button>
+
+        <h2 class=""></h2>
+      </ul>
+    </nav>
+
+    <script>
+      function Menu(e) {
+        let list = document.querySelector("ul");
+        e.name === "menu"
+          ? ((e.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+          : ((e.name = "menu"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+      }
+    </script>
+    <div>
+      <section id="banner">
+        <div class="w-full">
+          <img
+            id="img"
+            src=" https://lh3.googleusercontent.com/O2brqbtnO_8fHn7GBSNzXqjVe76QM4snpmQHo6sB98fJihh2nmA86RTdDAKHiHMnGpGMfNKdl1-KMFnYrkPBoSqX8Ra2h81fLVZ1_60CbgabOtXqsbMbkc2Gbew3AJqR6JNomNw"
+            alt="banner"
+          />
+        </div>
+      </section>
+      <h1
+        class="text-4xl md:text-6xl text-gray-700 font-semibold text-center m-10"
+      >
+        REGISTRATION OF MEMBERS
+      </h1>
+
+      <div class="table-container text-xl font-sans">
+        <table>
+          <!-- <h1 class="heading">Registration Table </h1> -->
+          <thead>
+            <tr>
+              <th>Serial Number</th>
+              <th>Name</th>
+              <th>Email id</th>
+              <th>Phone Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Biswajit</td>
+              <td><p>biswajitpat@gmail.com</p></td>
+              <td>8658312730</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Ayesh</td>
+              <td><p>heyyayesh69@gmail.com</p></td>
+              <td>8260169650</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Atanu</td>
+              <td><p>atanudey123@gmail.com</p></td>
+              <td>7873215970</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Souvik</td>
+              <td><p>gvugvuygvugyvvgvsouvikhalder45@gmail.com</p></td>
+              <td>8756264818</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Subham</td>
+              <td><p>subhamotta21@gmail.com</p></td>
+              <td>7847009203</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="py-10 flex">
+        <div class="basis-1/2 text-center">
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-2xl rounded-lg text-base px-6 py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Add New Member
+          </button>
+        </div>
+        <div class="basis-1/2 text-center text-2xl">
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-2xl rounded-lg text-base px-6 py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+
+    <footer class="text-gray-100 bg-gray-800">
+      <div class="max-w-3xl mx-auto py-6">
+        <h1 class="text-center text-lg lg:text-2xl">
+          Join us on smartbit hackathon
+        </h1>
+
+        <div class="flex justify-center mt-6">
+          <div class="bg-white rounded-md">
+            <div class="flex flex-wrap justify-between md:flex-row">
+              <input
+                type="email"
+                class="m-1 p-2 appearance-none text-gray-700 text-sm focus:outline-none focus:placeholder-transparent"
+                placeholder="Enter your email"
+                aria-label="Enter your email"
+              />
+            </div>
+          </div>
+        </div>
+
+        <hr class="h-px mt-6 bg-gray-700 border-none" />
+
+        <div
+          class="flex flex-col items-center justify-between mt-6 md:flex-row"
+        >
+          <div>
+            <a
+              href="#"
+              class="text-xl font-bold text-gray-100 hover:text-gray-400"
+              >Biswajit pat</a
+            >
+          </div>
+
+          <div class="flex mt-4 md:m-0">
+            <div class="-mx-4">
+              <a
+                href="#"
+                class="px-4 text-sm text-gray-100 font-medium hover:text-gray-400"
+                >About</a
+              >
+              <a
+                href="#"
+                class="px-4 text-sm text-gray-100 font-medium hover:text-gray-400"
+                >Blog</a
+              >
+              <a
+                href="#"
+                class="px-4 text-sm text-gray-100 font-medium hover:text-gray-400"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><div class="bg-yellow-600 flex">
+    <div class="bg-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa odit reprehenderit? Minus, molestias sequi?</div>
+    <div class="bg-red-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, quis. Maxime adipisci ipsam deserunt vitae?</div>
+  </div>
+  </body>
 </html>
