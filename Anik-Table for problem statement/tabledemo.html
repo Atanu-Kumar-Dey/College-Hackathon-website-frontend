@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Table Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+        .table{
+            width: 100%;
+        }
+        
+        
+        .table_header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color:rgb(244, 240, 240) ;
+            flex-wrap: wrap;
+        }
+
+        button{
+            outline: none;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px;
+            color: #000000;
+            background-color: #0298cf;
+        }
+        button:hover{
+            background-color: #005675;
+            /* border: 1px solid black; */
+            color: #ffffff;
+        }
+        .add_new{
+            padding: 10px 20px;
+            color: white;
+            background-color: #0298cf;
+        }
+        input{
+            padding: 10px 20px;
+            /* margin-left: 60px; */
+            /* margin-right: 60px; */
+            outline: none;
+            border: 1px solid #0298cf;
+            border-radius: 6px;
+            color:#0298cf ;
+        }
+        .table_section{
+            margin-left: 60px;
+            margin-right: 60px;
+            height: 500px;
+            overflow: auto;
+        }
+        table{
+            width: 100%;
+            table-layout: fixed;
+            min-width: 900px;
+            border-collapse: collapse;
+        }
+        thead th{
+            position: sticky;
+            top: 0;
+            background-color: #0298cf;
+            font-size: 20px;
+            color: rgb(26, 26, 26);
+        }
+        th,td{
+            border-bottom: 1px solid #dddddd;
+            word-break: break-all;
+            text-align: center;
+        }
+        th{
+            border: 1px solid #33373b;
+            padding: 10px 20px;
+        }
+        td{
+            border: 1px solid #767779;
+            padding: 20px 20px;
+        }
+        tr:hover{
+            color: #0298cf;
+            cursor: pointer;
+            /* background-color: #c41f1f; */
+        }
+        tr:hover td{
+            color: #0298cf;
+            cursor: pointer;
+            background-color: #e0f6ff;
+        }
+        ::placeholder{
+            color:#0298cf ;
+        }
+        ::-webkit-scrollbar{
+            height: 5px;
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track{
+            box-shadow: inset 0 0 6px rgb(0,0,0,0.3);
+        }
+        ::-webkit-scrollbar-thumb{
+            box-shadow: inset 0 0 6px rgb(0,0,0,0.3);
+        }
+
+        .pagination{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 10px 20px;
+        }
+        
+        .pagination div{
+            padding: 10px;
+            border: 2px solid #d5d0d0;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0298cf;
+            color: #ffffff;
+            box-shadow: 0px 0px 4px 0px rgb(0,0,0,0.75);
+            margin: 0 5px;
+
+        }
+        .pagination p{
+            padding: 10px;
+            border: 2px solid #d5d0d0;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0298cf;
+            color: #ffffff;
+            box-shadow: 0px 0px 4px 0px rgb(0,0,0,0.75);
+            margin: 0 5px;
+
+        }
+        .pagination div:hover{
+            background-color: #005675;
+        }
+
+    </style>
+</head>
+<body class="">
+    <div class="table">
+        <div class="table_header">
+        <div>
+        <input placeholder="Search">
+        </div>
+        </div>
+        <div class="table_section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Problem Statement Title</th>
+                        <th>Submitted Ideas</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Topic-1</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Topic-2</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    <tr>
+                        <td>3</td>
+                        <td>Topic-3</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Topic-4</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Topic-5</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Topic-6</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Tpic-7</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Topic-8</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Topic-9</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Topic-10</td>
+                        <td>10</td>
+                        <td class="px-6 py-4 text-lg border-2">
+                            <button href="#" type="button" class="button">View</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <div><i class="fa-solid fa-angles-left"></i></div>
+            <div><i class="fa-solid fa-chevron-left"></i></div>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <div><i class="fa-solid fa-chevron-right"></i></div>
+            <div><i class="fa-solid fa-angles-right"></i></div>
+        </div>
+    </div>    
+</body>
+</html>
